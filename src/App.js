@@ -76,18 +76,18 @@ const deleteCoffee = (coffee) => {
 
   return (
     <div className="App">
-      <h1>Coffees of The World</h1>
-      <hr/>
-      <Link to="/create">
-      <button>Add Another Coffee!</button>
-      </Link>
+      <div className="header">
+        <h1>Coffees of The World</h1>
+        <hr/>
+        <Link to="/create">
+        <button>Add Another Coffee!</button>
+        </Link>
+      </div>
       <main>
         <Switch>
           <Route exact path='/' render={(rp) => <Display {...rp} coffees={coffees} selectCoffee={selectCoffee} deleteCoffee={deleteCoffee} />}/>
           <Route exact path='/create' render={(rp) => <Form {...rp} label="create" coffee={emptyCoffee}  handleSubmit={handleCreate} />} />
           <Route exact path='/edit' render={(rp) => <Form {...rp} label="update"  coffee={selectedCoffee} handleSubmit={handleUpdate} />} />
-
-
         </Switch>
 
       </main>
