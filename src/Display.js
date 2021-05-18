@@ -8,7 +8,7 @@ const Display = ({coffees, selectCoffee, history, deleteCoffee}) => {
             <article key={coffee._id}> 
                 <h1>{coffee.name}</h1>
                 <img src={coffee.img}/>
-                <h3>{coffee.description}</h3>
+                <h2>{coffee.description}</h2>
                 <button onClick={() => {selectCoffee(coffee) 
                     history.push('/edit')}}>Edit</button>
                 <button onClick={() => {deleteCoffee(coffee)}}>Delete</button>
