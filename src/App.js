@@ -50,7 +50,7 @@ const handleCreate = (newCoffee) => {
 const handleUpdate = (coffee) => { 
   fetch(url + "/coffees/" + coffee._id, { 
     method: "PUT", 
-    headers: { 
+    headers: {
       "Content-Type": "application/json"
     }, 
     body: JSON.stringify(coffee)
